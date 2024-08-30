@@ -1,0 +1,90 @@
+
+<nav class="navbar  navbar-expand-lg" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" id="logo"><span>M</span>aharashtra Tourism</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse " data-bs-target="#mynavbar">
+           
+        </button>
+       
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <div [ngSwitch]="usertype">
+            <ul class="navbar-nav nav" *ngSwitchCase="'guest'">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/hm">Home</a>
+                </li>
+
+               
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pkg">Package</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ser">Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ga">Gallary</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ab">About</a>
+                </li>
+               <li class="nav-item"> <a class="nav-link" routerLink="/sign"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/log"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+
+              <ul class="navbar-nav nav" *ngSwitchCase="'user'">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/hm">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/bo">Book</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pkg">Package</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ser">Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ga">Gallary</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ab">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/bs">Booking Status</a>
+                </li>
+
+             
+             <li class="nav-item"><a (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              </ul>
+
+              <ul class="navbar-nav nav" *ngSwitchCase="'admin'">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/hm">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/abs">Booking tour</a>
+                </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" routerLink="/ga">Gallary</a>
+                </li>
+                <li class="nav-item"><a (click)="alogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                            </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+

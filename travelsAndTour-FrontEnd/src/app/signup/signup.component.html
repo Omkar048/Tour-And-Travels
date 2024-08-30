@@ -1,0 +1,100 @@
+<form #regForm="ngForm" (ngSubmit)="submitdata(regForm)">
+
+  <div class="col-sm-8 col-sm-offset-2" >
+  <h1 align="center">Register Here</h1>
+      <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" #name="ngModel" ngModel id="nm" [(ngModel)]="u.name" required pattern="[a-zA-Z]+">
+      <div *ngIf="!name.valid" style="color: red;">
+        <div *ngIf="name.errors?.['required']">
+         Name is required
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+          Name can contain only alphabets
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea class="form-control" id="ad" name="address" #Addreess="ngModel" ngModel="" [(ngModel)]="u.Addreess" required></textarea>
+      <div *ngIf="!Addreess.valid" style="color: red;">
+        <div *ngIf="Addreess.errors?.['required']">
+         Address is required
+        </div>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender:</label><br>
+      <input type="radio" name="gender" #gender="ngModel" ngModel required id="gender" value="Male" [(ngModel)]="u.gender">Male <br>
+      <input type="radio" name="gender" id="gender" value="Female" [(ngModel)]="u.gender">Female <br>
+      <div *ngIf="!gender.valid" style="color: red;">
+        <div *ngIf="gender.errors?.['required']">
+         Gender is required
+        </div>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" name="age"#age="ngModel" ngModel required pattern="[0-9]+" id="ag" [(ngModel)]="u.age">
+      <div *ngIf="!age.valid" style="color: red;">
+        <div *ngIf="age.errors?.['required']">
+         Age is required
+        </div>
+        <div *ngIf="age.errors?.['pattern']">
+          Age can contain only numbers in between 1 to 100
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input type="text" class="form-control" name="mobileNO" #mobileNO="ngModel" ngModel  id="cn" [(ngModel)]="u.mobileNO" pattern="[0-9]{10}" required>
+      <div *ngIf="!mobileNO.valid" style="color: red;">
+        <div *ngIf="mobileNO.errors?.['required']">
+     contact is required
+        </div>
+        <div *ngIf="mobileNO.errors?.['pattern']">
+      Contact can contain only 10 digits
+        </div>
+      </div>
+    </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="emailId" #emailId="ngModel" ngModel class="form-control" name="emailId" id="email" [(ngModel)]="u.emailId" required>
+    <div *ngIf="!emailId.valid" style="color: red;">
+      <div *ngIf="emailId.errors?.['required']">
+       Email is required
+      </div>
+    
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" #password="ngModel" ngModel name="password" id="pwd" [(ngModel)]="u.password" required>
+    <div *ngIf="!password.valid" style="color: red;">
+      <div *ngIf="password.errors?.['required']">
+     Password is required
+      </div>
+      
+    </div>
+
+  </div>
+ 
+  <button type="submit" class="btn btn-danger">Submit</button><a routerLink="/asign"><h5 style="color: black;">Admin Signup Click Here</h5></a>
+</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

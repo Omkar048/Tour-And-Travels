@@ -1,0 +1,84 @@
+.home{
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.home {
+    text-align: center;
+  padding-top: 200px;
+}
+.home .content h5{
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+.home .content h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after{
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{content: "Mahabaleshwar";}
+    10%{content: "Kokan-Darshan";}
+    20%{content: "Ajanta and Ellora Caves";}
+    30%{content: "Ashtavinayak Darshan";}
+    40%{content: "Alibaug";}
+    50%{content: "Nashik";}
+    60%{content: "Aurangabad";}
+    70%{content: "Matheran";}
+    80%{content: "Ratnagiri";}
+    90%{content: "Dapoli";}
+    100%{content: "Malshej Ghat";}
+} 
+.home .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .content a:hover{
+    background: #ffa500;
+    color: white;
+}
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+        font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 38px;
+    }
+    .home .content p{
+        font-size: 13px;
+    }
+}

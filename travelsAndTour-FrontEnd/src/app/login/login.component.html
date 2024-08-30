@@ -1,0 +1,15 @@
+<form (ngSubmit)="submitdata()">
+    <div class="form" style="color:black;border:0px;width: 40%;margin: auto auto;">
+      <h1 align="center">Login Here</h1>
+    <div class="form-group">
+      <label for="emailId">Email address:</label>
+      <input type="email" class="form-control" id="emailId" name="emailId" [(ngModel)]="u.emailId">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="u.password">
+    </div>
+    
+    <button type="submit" class="btn btn-default">Submit</button><a routerLink="/alog"><h5 style="color: black;">Admin Login Click Here</h5></a>
+ </div>
+ </form>

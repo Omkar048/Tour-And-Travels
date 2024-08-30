@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="text-center" style="color: rgb(22, 3, 3);">Booking Status</h1>
+    <table class="table table-bordered" style="background-color:white;">
+    <thead>
+        <tr>
+            <th>Booking Id</th>
+            <th>Date</th>
+            <th>Place</th>
+            <th>How Many</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of b">
+            <td>{{x.bid}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.whereto}}</td>
+                <td>{{x.howmany}}</td>
+                <td>{{x.status}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
